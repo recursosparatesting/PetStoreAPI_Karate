@@ -1,5 +1,5 @@
-id,name,idcategory,category,status,tagcolor,tagraza
-24,Rex,15,dogs,available,amarillo,criollo
-27,Mina,16,cats,pending,tres colores,calico
-31,Bruno,17,birds,sold,rojo,loro australiano
-32,Lucky,20,fishes,available,dorado,bailarina
+name,id,idcategory,category,tagcolor,tagraza,status
+Rex,24,15,dogs,amarillo,criollo,available
+Mina,27,16,cats,tres colores,calico,pending
+Bruno,31,17,birds,rojo,loro australiano,sold
+Lucky,32,20,fishes,dorado,bailarina,available

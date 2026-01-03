@@ -2,6 +2,12 @@ Feature: Gestión de Mascotas en Petstore API
 
   Background:
     * url 'http://localhost:8080/api/v3'
+    * def esquemaMascota = read('crearMascotaPostschema.json')
+   
+
+  @crearMascota
+  Scenario Outline: Crear mascota llamada <name> (<status>)
+    # El payload usa las variables del CSV: <name>,<id>, <idcategory>, <category>, <tagraza>, <tagcolor>, <status>
     * def requestPayload = 
     """
   {
@@ -22,9 +28,6 @@ Feature: Gestión de Mascotas en Petstore API
   "status" : "#(status)"
 }
     """
-
-  @crearMascota
-  Scenario Outline: Crear mascota llamada <name> (<status>)
     # Paso 1: Crear la mascota (POST)
     Given path 'pet'
     And request requestPayload
@@ -33,6 +36,7 @@ Feature: Gestión de Mascotas en Petstore API
     # Guardamos el ID generado por el servidor
     And def petId = response.id
     And print 'El ID creado es:', petId
+    And match response == esquemaMascota
 
     # Paso 2: Consultar la mascota creada (GET)
     Given path 'pet', petId

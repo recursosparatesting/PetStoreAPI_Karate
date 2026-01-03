@@ -1,0 +1,17 @@
+{
+  "name" : "#string",
+  "photoUrls" : [ "string", "string" ],
+  "id" : "#number",
+  "category" : {
+    "id" :"#number",
+    "name" : "#(category)"
+  },
+  "tags" : [ {
+    "id" : 19,
+    "name" : "#string"
+  }, {
+    "id" : 11,
+    "name" : "#string"
+  } ],
+  "status" : "#string"
+}

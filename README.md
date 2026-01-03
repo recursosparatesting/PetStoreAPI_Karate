@@ -33,10 +33,11 @@ sudo mv allure-2.24.0 /opt/allure
 sudo ln -s /opt/allure/bin/allure /usr/bin/allure  
 
 se pasa a la carpeta donde fue descargado y descomprimido el informe y se ejecuta el siguiente comando:  
-
+(Se asume que se tiene python 3 instalado y corriendo en el ubuntu local)
 python3 -m http.server 8090  
+** 8090 es el puerto que puede ser reemplazado por el que se desee.  
 
-8090 es el puerto que puede ser reemplazado por el que se desee.  Para verlo se invoca la url y el puerto de la siguiente manera:  
+Para verlo se invoca la url y el puerto de la siguiente manera:  
 
 http://localhost:8090/allure-html-report/#  
 
