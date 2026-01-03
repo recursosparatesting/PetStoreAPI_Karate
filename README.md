@@ -32,25 +32,24 @@ tar -zxvf allure-2.24.0.tgz
 sudo mv allure-2.24.0 /opt/allure  
 sudo ln -s /opt/allure/bin/allure /usr/bin/allure  
 
-se pasa a la carpeta donde fue descargado y descomprimido el informe y se ejecuta el siguiente comando:  
-(Se asume que se tiene python 3 instalado y corriendo en el ubuntu local)
-python3 -m http.server 8090  
-** 8090 es el puerto que puede ser reemplazado por el que se desee.  
+se pasa a la carpeta donde fue descargado y descomprimido el informe y se ejecuta el siguiente comando:      
+(Se asume que se tiene python 3 instalado y corriendo en el ubuntu local)     
+python3 -m http.server 8090         
+Nota: 8090 es el puerto que puede ser reemplazado por el que se desee.  
 
-Para verlo se invoca la url y el puerto de la siguiente manera:  
+Para verlo se invoca la url localhost y el puerto seguido del nombre de la carpeta creada al descomprimir:       
 
-http://localhost:8090/allure-html-report/#  
+http://localhost:8090/allure-html-report/#    
 
 
-## 📋 Descarga y ejecución de la ATM en local
+## 📋 Descarga y ejecución de la ATM en local      
 
 El robot tambien puede usarse de manera local: se puede clonar el repositorio y ejecutar la prueba de la siguiente manera:   
 git clone https://github.com/recursosparatesting/PetStoreAPI_Karate.git   
 
 Se ejecuta con el siguiente comando:    
+(se asume que se tiene instalado y configurado maven en el computador local)
 mvn clean test -Dkarate.options="--tags @crearMascota"  
 
-Para obtener el informe de Allure ejecute el siguiente comando, se abrira automaticamente el explorador con el informe:  
+Para obtener el informe de Allure ejecute el siguiente comando, se abrira automaticamente el explorador con el informe:    
 mvn io.qameta.allure:allure-maven:serve  
-
-
