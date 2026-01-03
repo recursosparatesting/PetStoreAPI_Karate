@@ -13,8 +13,8 @@ Los pasos que realiza son los siguientes:
 Instala maven y java  
 Descarga y ejecuta el repositorio de las APIs, se asegura que las APIs queden disponibles en http://localhost:8080/  
 Ejecuta la prueba con maven.  
-Exporta el informe de Karate 
-Genera un informe con Allure y lo exporta  
+Exporta el informe de Karate   
+Genera un informe con Allure y lo exporta    
 Los dos informes pueden ser descargados de Artifacts.  
 
 El pipeline corre en sistema operativo Ubuntu ultima version. Sin embargo, la automatizacion podria usarse en entornos windows o cualquier otra distribucion Linux.
