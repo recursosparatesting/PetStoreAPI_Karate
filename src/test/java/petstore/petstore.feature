@@ -1,4 +1,4 @@
-Feature: Gestión de Mascotas en Petstore API
+Feature: Prueba2 de gestion de Mascotas en Petstore API
 
   Background:
     * url 'http://localhost:8080/api/v3'
@@ -35,6 +35,7 @@ Feature: Gestión de Mascotas en Petstore API
     Then status 200
     # Guardamos el ID generado por el servidor
     And def petId = response.id
+    And def CategId = response.category.id
     And print 'El ID creado es:', petId
     And match response == esquemaMascota
 
@@ -43,6 +44,7 @@ Feature: Gestión de Mascotas en Petstore API
     When method get
     Then status 200
     And match response.name == name
+    And match response.category.id == CategId
     And match response.status == status
     And match response.id == petId
     And print 'Mascota verificada con éxito:', name
